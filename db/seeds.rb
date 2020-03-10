@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+person = Person.find_or_create_by!(name: 'John Doe')
+person.years.find_or_create_by!(year: 2018).locations.create!([
+  { name: "Greenwich Obsvatory, UK", latitude: 51.476852, longitude: -0.000500 },
+  { name: "Taj Mahal", latitude: 27.171165982,  longitude: 78.038666512 }
+])

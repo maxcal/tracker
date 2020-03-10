@@ -5,6 +5,6 @@ class YearTest < ActiveSupport::TestCase
     assert_equal Year.reflect_on_association(:person).macro, :belongs_to
   end
   test "has many locations" do
-    assert_equal Year.reflect_on_association(:locations).macro, :has_many
+    assert_equal Year.reflect_on_association(:location).macro, :has_one
   end
 end
