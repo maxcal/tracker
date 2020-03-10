@@ -8,4 +8,8 @@ class PersonTest < ActiveSupport::TestCase
   test "has many years" do
     assert_equal Person.reflect_on_association(:years).macro, :has_many
   end
+
+  test "has many locations" do
+    assert_equal Person.reflect_on_association(:locations).macro, :has_many
+  end
 end
