@@ -4,7 +4,7 @@ module People
     # GET /people/1/locations.json
     def index
       respond_to do |f|
-        f.json {}
+        f.json
       end
     end
 

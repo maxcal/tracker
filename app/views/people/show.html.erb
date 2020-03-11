@@ -1,9 +1,11 @@
-<p id="notice"><%= notice %></p>
+<h2><%= @person.name %>
+<h3>My map</h3>
+<%= content_tag :div, "",
+        class: "map personal-map",
+        data: { src: person_locations_path(@person) }
+%>
 
-<p>
-  <strong>Name:</strong>
-  <%= @person.name %>
-</p>
+
 
 <%= link_to 'Edit', edit_person_path(@person) %> |
 <%= link_to 'Back', people_path %>
